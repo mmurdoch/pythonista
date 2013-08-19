@@ -21,6 +21,12 @@ class Theme:
 	def determine_darkest(self):
 		avgs = [(avg(color), color) for color in self.colors]
 		return min(avgs)[1]
+		
+	def __len__(self):
+		return len(self.colors)
+	
+	def __getitem__(self, key):
+		return self.colors[key]
 
 mucha_winter = Theme(
     name='Mucha Winter',
