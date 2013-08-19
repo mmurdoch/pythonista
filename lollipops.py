@@ -13,11 +13,11 @@ palette = robots_are_cool
 canvas.begin_updates()
 
 canvas.set_size(width, height)
-canvas.set_fill_color(*palette['darkest'])
+canvas.set_fill_color(*palette.darkest)
 canvas.fill_rect(0, 0, width, height)
 
-canvas.set_fill_color(*random.choice(palette['palette']))
-canvas.set_stroke_color(*palette['lightest'])
+canvas.set_fill_color(*random.choice(palette))
+canvas.set_stroke_color(*palette.lightest)
 start_x, start_y = (width / 2.0, height / 2.0)
 
 lollipop_points = []
